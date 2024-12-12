@@ -44,3 +44,7 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ```sh
 git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 ```
+
+## Keymaps
+
+1. `<C-X>` `<C-O>` auto completion
