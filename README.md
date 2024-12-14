@@ -37,7 +37,7 @@ Go to tab text and activate custom font and select your installed font.
 
 ### Neovim config
 ```sh
-git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
+git clone https://github.com/schillermann/playground-nvim-config.git ~/.config/nvim
 ```
 
 ### Install nvim-lspconfig using Vim's "packages" feature
