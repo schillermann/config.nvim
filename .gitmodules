@@ -4,3 +4,6 @@
 [submodule "pack/nvim/start/tokyonight"]
 	path = pack/nvim/start/tokyonight
 	url = git@github.com:folke/tokyonight.nvim.git
+[submodule "pack/nvim/start/nvim-treesitter"]
+	path = pack/nvim/start/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter.git
