@@ -7,3 +7,6 @@
 [submodule "pack/nvim/start/nvim-treesitter"]
 	path = pack/nvim/start/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "pack/nvim/start/lualine.nvim"]
+	path = pack/nvim/start/lualine.nvim
+	url = git@github.com:nvim-lualine/lualine.nvim.git
