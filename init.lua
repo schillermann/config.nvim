@@ -1,3 +1,5 @@
+require("config.options")
+require("config.keymaps")
 require("config.autocmd")
 require('lualine').setup()
 require'nvim-treesitter'.setup({
