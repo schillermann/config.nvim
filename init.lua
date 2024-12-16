@@ -1,7 +1,7 @@
 require("config.options")
 require("config.keymaps")
 require("config.autocmd")
-require('lualine').setup()
+require("config.statusline")
 require'nvim-treesitter'.setup({
   ensure_installed = {
     "angular",
