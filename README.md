@@ -2,7 +2,8 @@
 
 1. [Requirements](#requirements)
 2. [Install](#install)
-3. [Keymaps](#keymaps)
+3. [Package](#package)
+4. [Keymaps](#keymaps)
 
 ## Requirements
 1. Neovim >= 0.8
@@ -12,7 +13,8 @@
 #### Ubuntu
 Change to the directory, where you want to copy the source files of neovim and clone it from repository.
 ```sh
-sudo apt install git && git clone https://github.com/neovim/neovim
+sudo apt install git
+git clone https://github.com/neovim/neovim
 ```
 
 Install build tools
@@ -42,6 +44,18 @@ Go to tab text and activate custom font and select your installed font.
 ### Neovim config
 ```sh
 git clone --recurse-submodules git@github.com:schillermann/playground-nvim-config.git ~/.config/nvim
+```
+
+## Package
+Install package to load automatically when Neovim is launched.
+```sh
+cd ~/.config/nvim
+git submodule add https://github.com/owner/repo-name pack/start/repo-name
+```
+Install package that only need to be loaded as required. 
+```sh
+cd ~/.config/nvim
+git submodule add https://github.com/owner/repo-name pack/start/repo-name
 ```
 
 ## Keymaps
