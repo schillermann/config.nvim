@@ -1,5 +1,9 @@
 # Playground Neovim Config
 
+1. [Requirements](#requirements)
+2. [Install](#install)
+3. [Keymaps](#keymaps)
+
 ## Requirements
 1. Neovim >= 0.8
 
