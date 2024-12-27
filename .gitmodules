@@ -1,9 +1,9 @@
-[submodule "pack/nvim/start/nvim-lspconfig"]
-	path = pack/nvim/start/nvim-lspconfig
-	url = https://github.com/neovim/nvim-lspconfig
-[submodule "pack/nvim/start/tokyonight"]
-	path = pack/nvim/start/tokyonight
-	url = git@github.com:folke/tokyonight.nvim.git
-[submodule "pack/nvim/start/nvim-treesitter"]
-	path = pack/nvim/start/nvim-treesitter
+[submodule "pack/github/start/nvim-lspconfig"]
+	path = pack/github/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
+[submodule "pack/github/start/nvim-treesitter"]
+	path = pack/github/start/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "pack/github/start/tokyonight"]
+	path = pack/github/start/tokyonight
+	url = git@github.com:folke/tokyonight.nvim.git
