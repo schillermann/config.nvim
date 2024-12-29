@@ -6,6 +6,7 @@
    - [Install Nerd Fonts For Terminal](#install-nerd-fonts-for-terminal)
    - [Install Neovim Config](#install-neovim-config)
    - [Install LSP Server](#install-lsp-server)
+   - [Install Live Grep](#install-live-grep)
 3. [Package](#package)
 4. [Keymaps](#keymaps)
 5. [Commands](#commands)
@@ -70,18 +71,34 @@ git clone --recurse-submodules git@github.com:schillermann/playground-nvim-confi
 npm install -g typescript-language-server
 ```
 
+### Install Live Grep
+
+Install live grep for linux.
+
+```sh
+sudo apt install ripgrep
+```
+
+Install live grep for mac.
+
+```sh
+brew install ripgrep
+```
+
 ## Package
 
 Install package to load automatically when Neovim is launched.
 
 ```sh
-git submodule add git@github.com:owner/package-name.git ~/.config/nvim/pack/github/start/package-name
+cd ~/.config/nvim
+git submodule add git@github.com:owner/package-name.git pack/github/start/package-name
 ```
 
 Install package that only need to be loaded as required.
 
 ```sh
-git submodule add git@github.com:owner/package-name.git ~/.config/nvim/pack/github/opt/package-name
+cd ~/.config/nvim
+git submodule add git@github.com:owner/package-name.git pack/github/opt/package-name
 ```
 
 ## Keymaps

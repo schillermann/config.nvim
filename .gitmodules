@@ -16,3 +16,6 @@
 [submodule "pack/github/start/copilot-chat-plenary"]
 	path = pack/github/start/copilot-chat-plenary
 	url = git@github.com:nvim-lua/plenary.nvim.git
+[submodule "pack/github/start/telescope"]
+	path = pack/github/start/telescope
+	url = git@github.com:nvim-telescope/telescope.nvim.git
