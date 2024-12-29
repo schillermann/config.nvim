@@ -21,7 +21,7 @@
 
 #### Ubuntu
 
-Change to the directory, where you want to copy the source files of neovim and clone it from repository.
+Change to the directory, where you want to copy the source files of Neovim and clone it from repository.
 
 ```sh
 sudo apt install git
@@ -73,13 +73,13 @@ npm install -g typescript-language-server
 
 ### Install Live Grep
 
-Install live grep for linux.
+Install live grep on Linux.
 
 ```sh
 sudo apt install ripgrep
 ```
 
-Install live grep for mac.
+Install live grep on Mac.
 
 ```sh
 brew install ripgrep
@@ -87,14 +87,14 @@ brew install ripgrep
 
 ## Package
 
-Install package to load automatically when Neovim is launched.
+Install the package to load automatically when Neovim is launched.
 
 ```sh
 cd ~/.config/nvim
 git submodule add git@github.com:owner/package-name.git pack/github/start/package-name
 ```
 
-Install package that only need to be loaded as required.
+Install the package that only need to be loaded as required.
 
 ```sh
 cd ~/.config/nvim
