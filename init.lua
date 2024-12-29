@@ -2,7 +2,7 @@ require("config.options")
 require("config.keymaps")
 require("config.autocmd")
 require("config.statusline")
-require'nvim-treesitter'.setup({
+require("nvim-treesitter").setup({
   ensure_installed = {
     "angular",
     "bash",
@@ -43,3 +43,4 @@ local lspconfig = require('lspconfig')
 lspconfig.ts_ls.setup {}
 
 vim.cmd("colorscheme tokyonight")
+require("CopilotChat").setup()
