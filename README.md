@@ -2,12 +2,13 @@
 
 1. [Requirements](#requirements)
 2. [Setup](#setup)
-    - [Build And Install Neovim From Source](#build-and-install-neovim-from-source)
-    - [Install Nerd Fonts For Terminal](#install-nerd-fonts-for-terminal)
-    - [Install Neovim Config](#install-neovim-config)
-    - [Install LSP Server](#install-lsp-server)
-5. [Package](#package)
-6. [Keymaps](#keymaps)
+   - [Build And Install Neovim From Source](#build-and-install-neovim-from-source)
+   - [Install Nerd Fonts For Terminal](#install-nerd-fonts-for-terminal)
+   - [Install Neovim Config](#install-neovim-config)
+   - [Install LSP Server](#install-lsp-server)
+3. [Package](#package)
+4. [Keymaps](#keymaps)
+5. [Commands](#commands)
 
 ## Requirements
 
@@ -62,7 +63,9 @@ git clone --recurse-submodules git@github.com:schillermann/playground-nvim-confi
 ```
 
 ### Install LSP Server
+
 #### TypeScript
+
 ```sh
 npm install -g typescript-language-server
 ```
@@ -84,3 +87,7 @@ git submodule add git@github.com:owner/package-name.git ~/.config/nvim/pack/gith
 ## Keymaps
 
 1. `<C-X>` `<C-O>` auto completion
+
+## Commands
+
+`:find FILENAME` Find file by name in project with `<tab>` auto completion
