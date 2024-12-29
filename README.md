@@ -106,5 +106,6 @@ git submodule add git@github.com:owner/package-name.git pack/github/opt/package-
 1. `<C-X>` `<C-O>` auto completion
 
 ## Commands
-
+### Find
 `:find FILENAME` Find file by name in project with `<tab>` auto completion
+`:Telescope keymaps` Find keymaps
