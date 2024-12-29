@@ -1,17 +1,21 @@
 # Playground Neovim Config
 
 1. [Requirements](#requirements)
-2. [Install](#install)
-3. [Package](#package)
-4. [Keymaps](#keymaps)
+2. [Setup](#setup)
+    - [Build And Install Neovim From Source](#build-and-install-neovim-from-source)
+    - [Install Nerd Fonts For Terminal](#install-nerd-fonts-for-terminal)
+    - [Install Neovim Config](#install-neovim-config)
+    - [Install LSP Server](#install-lsp-server)
+5. [Package](#package)
+6. [Keymaps](#keymaps)
 
 ## Requirements
 
 1. Neovim >= 0.8
 
-## Install
+## Setup
 
-### Build Neovim from source
+### Build And Install Neovim From Source
 
 #### Ubuntu
 
@@ -51,10 +55,16 @@ Now you have to set the font in the terminal.
 Open in the terminal menu preferences and then your profile.
 Go to tab text and activate custom font and select your installed font.
 
-### Neovim config
+### Install Neovim Config
 
 ```sh
 git clone --recurse-submodules git@github.com:schillermann/playground-nvim-config.git ~/.config/nvim
+```
+
+### Install LSP Server
+#### TypeScript
+```sh
+npm install -g typescript-language-server
 ```
 
 ## Package
