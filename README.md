@@ -5,8 +5,7 @@
    - [Build And Install Neovim From Source](#build-and-install-neovim-from-source)
    - [Install Nerd Fonts For Terminal](#install-nerd-fonts-for-terminal)
    - [Install Neovim Config](#install-neovim-config)
-   - [Install LSP Server](#install-lsp-server)
-   - [Install Live Grep](#install-live-grep)
+   - [Install Package Dependencies](#install-package-dependencies)
 3. [Package](#package)
 4. [Keymaps](#keymaps)
 5. [Commands](#commands)
@@ -63,15 +62,17 @@ Go to tab text and activate custom font and select your installed font.
 git clone --recurse-submodules git@github.com:schillermann/playground-nvim-config.git ~/.config/nvim
 ```
 
-### Install LSP Server
+### Install Package Dependencies
 
-#### TypeScript
+#### LSP
+
+##### TypeScript
 
 ```sh
 npm install -g typescript-language-server
 ```
 
-### Install Live Grep
+#### Telescope 
 
 Install live grep on Linux.
 
@@ -83,6 +84,23 @@ Install live grep on Mac.
 
 ```sh
 brew install ripgrep
+```
+
+#### CopilotChat
+
+For Linux.
+
+```sh
+apt install lynx
+apt install python3-tiktoken
+```
+
+For Mac.
+
+```sh
+brew install lynx
+brew install python
+pip3 install tiktoken
 ```
 
 ## Package
