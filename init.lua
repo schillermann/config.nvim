@@ -44,4 +44,11 @@ local lspconfig = require('lspconfig')
 lspconfig.ts_ls.setup {}
 
 require('telescope').setup()
-require("CopilotChat").setup()
+require("CopilotChat").setup({
+  mappings = {
+    reset = {
+      normal = 'ge',
+      insert = '',
+    },
+  }
+})
