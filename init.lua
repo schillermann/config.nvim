@@ -39,16 +39,16 @@ require("nvim-treesitter").setup({
   },
 })
 
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls
 lspconfig.ts_ls.setup({})
 
-require('telescope').setup()
+require("telescope").setup()
 require("CopilotChat").setup({
   mappings = {
     reset = {
-      normal = 'ge',
-      insert = '',
+      normal = "ge",
+      insert = "",
     },
   }
 })

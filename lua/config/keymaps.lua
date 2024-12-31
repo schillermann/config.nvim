@@ -1,25 +1,26 @@
-local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 -- File Explorer
-keymap("n", "<leader>e", ":Lexplore <CR>", opts)
+vim.keymap.set("n", "<leader>e", ":Lexplore<CR>", { desc = "Open file explorer" })
 -- Jump To Window
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+vim.keymap.set("n", "<C-h>", "<c-w>h", { desc = "Jump to window left" })
+vim.keymap.set("n", "<C-j>", "<c-w>j", { desc = "Jump to window down" })
+vim.keymap.set("n", "<C-k>", "<c-w>k", { desc = "Jump to window up" })
+vim.keymap.set("n", "<C-l>", "<c-w>l", { desc = "Jump to window right" })
 -- Resize Window
-keymap("n", "<C-S-k>", ":resize +2<CR>", { noremap = true, silent = true, desc = "Increases the size of the horizontal window" })
-keymap("n", "<C-S-j>", ":resize -2<CR>", { noremap = true, silent = true, desc = "Decreases the size of the horizontal window" })
-keymap("n", "<C-S-l>", ":vertical resize +2<CR>", { noremap = true, silent = true, desc = "Increases the size of the vertical window" })
-keymap("n", "<C-S-h>", ":vertical resize -2<CR>", { noremap = true, silent = true, desc = "Decreases the size of the vertical window" })
+vim.keymap.set("n", "<C-S-Up>", "<CMD>resize +2<CR>", { desc = "Increases the size of the horizontal window" })
+vim.keymap.set("n", "<C-S-Down>", "<CMD>resize -2<CR>", { desc = "Decreases the size of the horizontal window" })
+vim.keymap.set("n", "<C-S-Right>", "<CMD>vertical resize +2<CR>", { desc = "Increases the size of the vertical window" })
+vim.keymap.set("n", "<C-S-Left>", "<CMD>vertical resize -2<CR>", { desc = "Decreases the size of the vertical window" })
 -- Buffer Navigation
-keymap("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true, desc = "Jump to the next buffer" })
-keymap("n", "<S-h>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Jump to the previous buffer" })
+vim.keymap.set("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Jump to the next buffer" })
+vim.keymap.set("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Jump to the previous buffer" })
 -- Package Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { noremap = true, silent = true, desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { noremap = true, silent = true, desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true, silent = true, desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { noremap = true, silent = true, desc = 'Telescope help tags' })
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+-- Package Copilot Chat
+keymap("n", "<leader>aa", "<CMD>CopilotChatToggle<CR>", { desc = "Open and close Copilot Chat" })
