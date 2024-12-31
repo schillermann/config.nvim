@@ -17,3 +17,9 @@ keymap("n", "<C-S-h>", ":vertical resize -2<CR>", { noremap = true, silent = tru
 -- Buffer Navigation
 keymap("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true, desc = "Jump to the next buffer" })
 keymap("n", "<S-h>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Jump to the previous buffer" })
+-- Package Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { noremap = true, silent = true, desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { noremap = true, silent = true, desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true, silent = true, desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { noremap = true, silent = true, desc = 'Telescope help tags' })
