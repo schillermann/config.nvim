@@ -19,3 +19,6 @@
 [submodule "pack/github/start/lib-plenary"]
 	path = pack/github/start/lib-plenary
 	url = git@github.com:nvim-lua/plenary.nvim.git
+[submodule "pack/github/start/mini-pairs"]
+	path = pack/github/start/mini-pairs
+	url = git@github.com:echasnovski/mini.pairs.git

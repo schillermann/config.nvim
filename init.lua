@@ -38,6 +38,7 @@ require("nvim-treesitter").setup({
     end,
   },
 })
+require("mini.pairs").setup()
 
 local lspconfig = require("lspconfig")
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls
