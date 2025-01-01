@@ -58,7 +58,6 @@ require("blink.cmp").setup({
     },
   },
   keymap = {
-    ["<Esc>"] = { "hide", "fallback" },
     ["<CR>"] = { "accept", "fallback" },
     ["<Tab>"] = { "select_next", "fallback" },
     ["<S-Tab>"] = { "select_prev", "fallback" },
