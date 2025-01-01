@@ -82,6 +82,7 @@ require("copilot").setup({
   }
 })
 require("CopilotChat").setup({
+  question_header = "## Mario ",
   mappings = {
     reset = {
       normal = "ge",
