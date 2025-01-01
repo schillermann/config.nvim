@@ -39,17 +39,53 @@ require("nvim-treesitter").setup({
   },
 })
 require("mini.pairs").setup()
-
+require("telescope").setup()
+require("blink.cmp").setup({
+  completion = {
+    accept = {
+      auto_brackets = {
+        enabled = true,
+      },
+    },
+    menu = {
+      draw = {
+        treesitter = { "lsp" },
+      },
+    },
+    documentation = {
+      auto_show = true,
+      auto_show_delay_ms = 200,
+    },
+  },
+  keymap = {
+    ["<Esc>"] = { "hide", "fallback" },
+    ["<CR>"] = { "accept", "fallback" },
+    ["<Tab>"] = { "select_next", "fallback" },
+    ["<S-Tab>"] = { "select_prev", "fallback" },
+  },
+  sources = {
+    cmdline = {},
+  },
+  signature = { enabled = true }
+})
+local capabilities = require('blink.cmp').get_lsp_capabilities()
 local lspconfig = require("lspconfig")
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls
-lspconfig.ts_ls.setup({})
+lspconfig.ts_ls.setup({ capabilities = capabilities })
 
-require("telescope").setup()
+require("copilot").setup({
+  suggestion = {
+    auto_trigger = true,
+    keymap = {
+      accept = "<Tab>"
+    }
+  }
+})
 require("CopilotChat").setup({
   mappings = {
     reset = {
       normal = "ge",
-      insert = "",
+      insert = false,
     },
   }
 })

@@ -7,9 +7,6 @@
 [submodule "pack/github/start/tokyonight"]
 	path = pack/github/start/tokyonight
 	url = git@github.com:folke/tokyonight.nvim.git
-[submodule "pack/github/start/copilot"]
-	path = pack/github/start/copilot
-	url = git@github.com:github/copilot.vim.git
 [submodule "pack/github/start/copilot-chat"]
 	path = pack/github/start/copilot-chat
 	url = git@github.com:CopilotC-Nvim/CopilotChat.nvim.git
@@ -22,3 +19,9 @@
 [submodule "pack/github/start/mini-pairs"]
 	path = pack/github/start/mini-pairs
 	url = git@github.com:echasnovski/mini.pairs.git
+[submodule "pack/github/start/blink-cmp"]
+	path = pack/github/start/blink-cmp
+	url = git@github.com:Saghen/blink.cmp.git
+[submodule "pack/github/start/copilot"]
+	path = pack/github/start/copilot
+	url = git@github.com:zbirenbaum/copilot.lua.git
