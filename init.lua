@@ -67,10 +67,18 @@ require("blink.cmp").setup({
   },
   signature = { enabled = true }
 })
-local capabilities = require('blink.cmp').get_lsp_capabilities()
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 local lspconfig = require("lspconfig")
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls
 lspconfig.ts_ls.setup({ capabilities = capabilities })
+
+require("gitsigns").setup({
+  on_attach = function(bufnr)
+    local gitsigns = require("gitsigns")
+    vim.keymap.set("n", "[c", gitsigns.prev_hunk, { buffer = bufnr, desc = "Gitsigns preview hunk" })
+    vim.keymap.set("n", "]c", gitsigns.next_hunk, { buffer = bufnr, desc = "Gitsigns next hunk" })
+  end,
+})
 
 require("copilot").setup({
   suggestion = {

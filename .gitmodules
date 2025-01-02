@@ -25,3 +25,6 @@
 [submodule "pack/github/start/copilot"]
 	path = pack/github/start/copilot
 	url = git@github.com:zbirenbaum/copilot.lua.git
+[submodule "pack/github/start/gitsigns"]
+	path = pack/github/start/gitsigns
+	url = git@github.com:lewis6991/gitsigns.nvim.git
