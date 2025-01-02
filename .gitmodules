@@ -28,3 +28,6 @@
 [submodule "pack/github/start/gitsigns"]
 	path = pack/github/start/gitsigns
 	url = git@github.com:lewis6991/gitsigns.nvim.git
+[submodule "pack/github/start/git-browse"]
+	path = pack/github/start/git-browse
+	url = git@github.com:Morozzzko/git_browse.nvim.git
