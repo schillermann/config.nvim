@@ -72,7 +72,7 @@ git clone --recurse-submodules git@github.com:schillermann/playground-nvim-confi
 npm install -g typescript-language-server
 ```
 
-#### Telescope 
+#### Telescope
 
 Install live grep on Linux.
 
@@ -101,6 +101,20 @@ For Mac.
 brew install lynx
 brew install python
 pip3 install tiktoken
+```
+
+#### Clipboard
+
+For Linux Wayland.
+
+```sh
+apt install wl-clipboard
+```
+
+For Linux Xorg.
+
+```sh
+apt install xclip
 ```
 
 ## Package
