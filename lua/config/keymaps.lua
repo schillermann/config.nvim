@@ -2,7 +2,7 @@ local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 -- File Explorer
-vim.keymap.set("n", "<leader>e", ":Lexplore<CR>", { desc = "Open file explorer" })
+vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
 -- Jump To Window
 vim.keymap.set("n", "<C-h>", "<c-w>h", { desc = "Jump to window left" })
 vim.keymap.set("n", "<C-j>", "<c-w>j", { desc = "Jump to window down" })
