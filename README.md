@@ -7,8 +7,7 @@
    - [Install Neovim Config](#install-neovim-config)
    - [Install Package Dependencies](#install-package-dependencies)
 3. [Package](#package)
-4. [Keymaps](#keymaps)
-5. [Commands](#commands)
+4. [Commands](#commands)
 
 ## Requirements
 
@@ -133,13 +132,16 @@ cd ~/.config/nvim
 git submodule add git@github.com:owner/package-name.git pack/github/opt/package-name
 ```
 
-## Keymaps
-
-1. `<C-X>` `<C-O>` auto completion
-
 ## Commands
 
-### Find
+### Files
 
 1. `:find FILENAME` Find file by name in project with `<tab>` auto completion
-2. `:Telescope keymaps` Find keymaps
+
+### Keymaps
+
+1. `:Telescope keymaps` Find keymaps
+2. `:help index` All key bindings and commands
+3. `:help normal-index` List all key bindings and commands for normal mode
+4. `:help visual-index` List all key bindings and commands for visual mode
+5. `:help insert-index` List all key bindings and commands for insert mode
