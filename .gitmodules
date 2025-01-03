@@ -31,3 +31,6 @@
 [submodule "pack/github/start/git-browse"]
 	path = pack/github/start/git-browse
 	url = git@github.com:Morozzzko/git_browse.nvim.git
+[submodule "pack/github/start/today"]
+	path = pack/github/start/today
+	url = git@github.com:VVoruganti/today.nvim.git

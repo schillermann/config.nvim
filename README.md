@@ -117,6 +117,15 @@ For Linux Xorg.
 apt install xclip
 ```
 
+#### Today
+
+Copy journal template in folder.
+
+```sh
+mkdir ~/.today
+cp ~/.config/nvim/template-today.md ~/.today/jrnl.md
+```
+
 ## Package
 
 Install the package to load automatically when Neovim is launched.

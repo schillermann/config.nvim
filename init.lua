@@ -97,3 +97,6 @@ require("CopilotChat").setup({
     },
   }
 })
+
+vim.cmd("packadd today")
+require("today").setup()
