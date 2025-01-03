@@ -7,7 +7,8 @@
    - [Install Neovim Config](#install-neovim-config)
    - [Install Package Dependencies](#install-package-dependencies)
 3. [Package](#package)
-4. [Commands](#commands)
+4. [Keymaps](#keymaps)
+5. [Commands](#commands)
 
 ## Requirements
 
@@ -131,6 +132,13 @@ Install the package that only need to be loaded as required.
 cd ~/.config/nvim
 git submodule add git@github.com:owner/package-name.git pack/github/opt/package-name
 ```
+
+## Keymaps
+
+### Copy And Paste
+
+1. `"+y` Copy selection from visual mode to system clipboard
+2. `<C-r>+` Paste system clipboard content into input
 
 ## Commands
 
