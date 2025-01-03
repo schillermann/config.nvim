@@ -5,6 +5,7 @@
    - [Build And Install Neovim From Source](#build-and-install-neovim-from-source)
    - [Install Nerd Fonts For Terminal](#install-nerd-fonts-for-terminal)
    - [Install Neovim Config](#install-neovim-config)
+   - [Update Neovim Config](#update-neovim-config)
    - [Install Package Dependencies](#install-package-dependencies)
 3. [Package](#package)
 4. [Keymaps](#keymaps)
@@ -60,6 +61,20 @@ Go to tab text and activate custom font and select your installed font.
 
 ```sh
 git clone --recurse-submodules git@github.com:schillermann/playground-nvim-config.git ~/.config/nvim
+```
+
+### Update Neovim Config
+
+Update config with packages.
+
+```sh
+git pull --recurse-submodules
+```
+
+Add new packages.
+
+```sh
+git submodule update --init --recursive
 ```
 
 ### Install Package Dependencies
