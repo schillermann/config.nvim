@@ -1,6 +1,7 @@
 require("config.options")
 require("config.keymaps")
 require("config.autocmd")
+require("config.commands")
 require("config.statusline")
 require("nvim-treesitter").setup({
   ensure_installed = {
