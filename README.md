@@ -159,6 +159,10 @@ git submodule add git@github.com:owner/package-name.git pack/github/opt/package-
 
 ## Keymaps
 
+### Window
+
+1. `<C-w>o` Close other windows
+
 ### Copy And Paste
 
 1. `"+y` Copy selection from visual mode to system clipboard

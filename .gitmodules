@@ -40,3 +40,12 @@
 [submodule "pack/editor/start/statusline"]
 	path = pack/editor/start/statusline
 	url = git@github.com:schillermann/nvim-statusline.git
+[submodule "pack/manager/start/mason"]
+	path = pack/manager/start/mason
+	url = git@github.com:williamboman/mason.nvim.git
+[submodule "pack/manager/start/mason-lspconfig"]
+	path = pack/manager/start/mason-lspconfig
+	url = git@github.com:williamboman/mason-lspconfig.nvim.git
+[submodule "pack/editor/start/quickfix-expanse"]
+	path = pack/editor/start/quickfix-expanse
+	url = git@github.com:schillermann/nvim-quickfix-expanse.git
