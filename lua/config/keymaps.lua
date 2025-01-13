@@ -74,3 +74,7 @@ require("gitsigns").setup({
     end, { buffer = bufnr, desc = "Gitsigns preview hunk" })
   end,
 })
+-- Package Browse
+vim.keymap.set("n", "<leader>b", function()
+  require("browse").browse()
+end)

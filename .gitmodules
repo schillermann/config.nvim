@@ -49,3 +49,6 @@
 [submodule "pack/editor/start/quickfix-expanse"]
 	path = pack/editor/start/quickfix-expanse
 	url = git@github.com:schillermann/nvim-quickfix-expanse.git
+[submodule "pack/help/start/browse"]
+	path = pack/help/start/browse
+	url = git@github.com:lalitmee/browse.nvim.git

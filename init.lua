@@ -130,5 +130,11 @@ require("CopilotChat").setup({
   }
 })
 
+require("browse").setup({
+  provider = "google",
+  bookmarks = {
+    ["mdn References Web APIs"] = "https://developer.mozilla.org/en-US/docs/Web/API/%s"
+  }
+})
 vim.cmd("packadd today")
 require("today").setup()
