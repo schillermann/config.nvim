@@ -112,14 +112,6 @@ require("mason-lspconfig").setup({
   },
 })
 
-require("gitsigns").setup({
-  on_attach = function(bufnr)
-    local gitsigns = require("gitsigns")
-    vim.keymap.set("n", "[c", gitsigns.prev_hunk, { buffer = bufnr, desc = "Gitsigns preview hunk" })
-    vim.keymap.set("n", "]c", gitsigns.next_hunk, { buffer = bufnr, desc = "Gitsigns next hunk" })
-  end,
-})
-
 require("copilot").setup({
   suggestion = {
     auto_trigger = true,
