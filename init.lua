@@ -1,3 +1,10 @@
+vim.diagnostic.config({
+  virtual_text = false,
+  float = {
+    border = "single",
+  },
+})
+
 require("config.options")
 require("config.keymaps")
 require("config.autocmd")

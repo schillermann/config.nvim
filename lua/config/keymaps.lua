@@ -34,12 +34,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>r", vim.lsp.buf.references, { buffer = event.buf, desc = "LSP list [r]eferences" })
     vim.keymap.set({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action,
       { buffer = event.buf, desc = "LSP list [c]ode [a]ction" })
+    vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { buffer = event.buf, desc = "LSP [c]ode [f]ormat" })
     vim.keymap.set("n", "<leader>sd", vim.lsp.buf.document_symbol,
       { buffer = event.buf, desc = "LSP list [s]ymbols in [d]ocument " })
     vim.keymap.set("n", "<leader>sw", vim.lsp.buf.workspace_symbol,
       { buffer = event.buf, desc = "LSP list [s]ymbols in [w]orkspace" })
     vim.keymap.set("n", "<leader>sr", vim.lsp.buf.rename, { buffer = event.buf, desc = "LSP [s]ymbol [r]ename" })
-    vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { buffer = event.buf, desc = "LSP [c]ode [f]ormat" })
     vim.keymap.set("n", "<leader>si", vim.lsp.buf.incoming_calls,
       { buffer = event.buf, desc = "LSP list [s]ymbol [i]ncoming calls" })
     vim.keymap.set("n", "<leader>so", vim.lsp.buf.outgoing_calls,
@@ -48,8 +48,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- Diagnostics
     vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist,
       { buffer = event.buf, desc = "[d]iagnostic quickfix [l]ist" })
-    vim.keymap.set("n", "<leader>df", function()
-      vim.diagnostic.open_float(nil, { border = "single" })
-    end, { buffer = event.buf, desc = "[d]iagnostic [f]loat" })
+    vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float, { buffer = event.buf, desc = "[d]iagnostic [f]loat" })
   end,
 })
