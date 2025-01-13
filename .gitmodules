@@ -52,3 +52,6 @@
 [submodule "pack/help/start/browse"]
 	path = pack/help/start/browse
 	url = git@github.com:lalitmee/browse.nvim.git
+[submodule "pack/test/start/jest-terminal"]
+	path = pack/test/start/jest-terminal
+	url = git@github.com:schillermann/nvim-jest-terminal.git
