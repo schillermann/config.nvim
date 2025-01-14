@@ -48,7 +48,14 @@ require("nvim-treesitter.configs").setup({
 })
 -- TODO: Does it really make my work easier?
 -- require("mini.pairs").setup()
-require("telescope").setup()
+require("telescope").setup({
+  defaults = {
+    layout_strategy = "vertical",
+    layout_config = {
+      prompt_position = "top",
+    },
+  },
+})
 require("blink.cmp").setup({
   completion = {
     accept = {
