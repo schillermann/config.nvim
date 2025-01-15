@@ -1,23 +1,37 @@
 local autoCmdGroup = vim.api.nvim_create_augroup("KeymapGroup", {})
+local map = vim.keymap
+
+-- Remap original keymaps
+map.set("n", "za", "za", { desc = "Toggle fold under cursor" })
+map.set("n", "zc", "zc", { desc = "Close fold under cursor" })
+map.set("n", "zC", "zC", { desc = "Close all folds under cursor" })
+map.set("n", "zo", "zo", { desc = "Open fold under cursor" })
+map.set("n", "zO", "zO", { desc = "Open all folds under cursor" })
+map.set("n", "zM", "zM", { desc = "Close all folds" })
+map.set("n", "zR", "zR", { desc = "Open all folds" })
+map.set("n", "zm", "zm", { desc = "Fold more" })
+map.set("n", "zr", "zr", { desc = "Reduce folding" })
+map.set("n", "zx", "zx", { desc = "Update folds" })
+map.set("n", "zv", "zv", { desc = "Open enough folds to view cursor line" })
 
 -- Search
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+map.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- File Explorer
-vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
+map.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
 -- Buffer Navigation
-vim.keymap.set("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Jump to the next buffer" })
-vim.keymap.set("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Jump to the previous buffer" })
+map.set("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Jump to the next buffer" })
+map.set("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Jump to the previous buffer" })
 -- Terminal
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+map.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 -- Package Telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+map.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+map.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+map.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+map.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 -- Package Copilot Chat
-vim.keymap.set({ "n", "v" }, "<leader>aa", "<CMD>CopilotChatToggle<CR>", { desc = "Open and close Copilot Chat" })
-vim.keymap.set({ "n", "v" }, "<leader>ar", "<CMD>CopilotChatReset<CR>", { desc = "Reset Copilot Chat window" })
+map.set({ "n", "v" }, "<leader>aa", "<CMD>CopilotChatToggle<CR>", { desc = "Open and close Copilot Chat" })
+map.set({ "n", "v" }, "<leader>ar", "<CMD>CopilotChatReset<CR>", { desc = "Reset Copilot Chat window" })
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
   group = autoCmdGroup,

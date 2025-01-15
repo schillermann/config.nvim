@@ -1,15 +1,23 @@
+local opt = vim.opt
+
 vim.g.mapleader = " "
-vim.opt.mouse = ""
 vim.g.netrw_banner = 0
-vim.opt.scrolloff = 10
+opt.mouse = ""
+opt.scrolloff = 10
 -- Path to find files in project with `:find` command
 vim.o.path = ".,**"
 -- 2 spaces for tabs
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
--- Focus the new split
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+-- Focus the new split right
+opt.splitright = true
+opt.splitbelow = true
+-- fold
+opt.foldmethod = "marker"
+opt.foldmarker = "{,}"
+opt.foldlevelstart = 1
+opt.foldtext = " "
+opt.fillchars = { fold = " " }
 
 vim.cmd("colorscheme tokyonight")
