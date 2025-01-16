@@ -4,6 +4,7 @@ vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 opt.mouse = ""
 opt.scrolloff = 10
+opt.wildignore = { "*/.*/**", "*/.git/**", "*/node_modules/**", "*/dist/**" }
 -- Path to find files in project with `:find` command
 vim.o.path = ".,**"
 -- 2 spaces for tabs
