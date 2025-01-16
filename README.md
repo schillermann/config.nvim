@@ -1,4 +1,4 @@
-# Playground Neovim Config
+# My Personal Neovim Config
 
 1. [Requirements](#requirements)
 2. [Setup](#setup)
@@ -60,7 +60,7 @@ Go to tab text and activate custom font and select your installed font.
 ### Install Neovim Config
 
 ```sh
-git clone --recurse-submodules git@github.com:schillermann/playground-nvim-config.git ~/.config/nvim
+git clone --recurse-submodules git@github.com:schillermann/config.nvim ~/.config/nvim
 ```
 
 ### Update Neovim Config
