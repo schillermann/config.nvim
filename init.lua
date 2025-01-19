@@ -46,8 +46,6 @@ require("nvim-treesitter.configs").setup({
     end,
   },
 })
--- TODO: Does it really make my work easier?
--- require("mini.pairs").setup()
 require("telescope").setup({
   defaults = {
     layout_strategy = "vertical",
@@ -64,6 +62,7 @@ require("blink.cmp").setup({
       },
     },
     menu = {
+      auto_show = false,
       draw = {
         treesitter = { "lsp" },
       },
