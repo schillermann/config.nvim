@@ -1,7 +1,21 @@
 local autoCmdGroup = vim.api.nvim_create_augroup("KeymapGroup", {})
 local map = vim.keymap
 
--- Remap original keymaps
+-- Remap original key maps
+-- Completion
+map.set("n", "z=", "z=", { desc = "Spell check suggestions" })
+map.set("i", "<C-n>", "<C-n>", { desc = "Next completion based on text in open buffers" })
+map.set("i", "<C-p>", "<C-p>", { desc = "Previous completion based on text in open buffers" })
+map.set("i", "<C-x><C-o>", "<C-x><C-o>", { desc = "Omni Auto complete" })
+map.set("i", "<C-x><C-f>", "<C-x><C-f>", { desc = "File auto complete" })
+map.set("i", "<C-x><C-l>", "<C-x><C-l>", { desc = "Line auto complete" })
+map.set("i", "<C-x><C-y>", "<C-x><C-y>", { desc = "Scroll the screen" })
+map.set("i", "<C-x><C-k>", "<C-x><C-k>", { desc = "Dictionary auto complete" })
+map.set("i", "<C-x><C-s>", "<C-x><C-s>", { desc = "Spell auto complete" })
+map.set("i", "<C-x><C-t>", "<C-x><C-t>", { desc = "Thesaurus auto complete" })
+map.set("i", "<C-x><C-i>", "<C-x><C-i>", { desc = "Completes the word based on the keywords found in the current file" })
+
+-- Fold
 map.set("n", "za", "za", { desc = "Toggle fold under cursor" })
 map.set("n", "zc", "zc", { desc = "Close fold under cursor" })
 map.set("n", "zC", "zC", { desc = "Close all folds under cursor" })
