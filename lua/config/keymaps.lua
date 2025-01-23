@@ -14,8 +14,12 @@ map.set("i", "<C-x><C-s>", "<C-x><C-s>", { desc = "Spell word completion" })
 map.set("i", "<C-x><C-t>", "<C-x><C-t>", { desc = "Thesaurus word complete" })
 map.set("i", "<C-x><C-i>", "<C-x><C-i>", { desc = "Identifiers completion based on current buffer and included files" })
 -- Scroll
-map.set("i", "<C-y>", "<C-y>", { desc = "Scroll the screen up" })
-map.set("i", "<C-e>", "<C-e>", { desc = "Scroll the screen down" })
+map.set("i", "<C-y>", "<C-y>", { desc = "Scroll up a line" })
+map.set("i", "<C-e>", "<C-e>", { desc = "Scroll down a line" })
+map.set("i", "<C-u>", "<C-u>", { desc = "Scroll up half a page" })
+map.set("i", "<C-d>", "<C-d>", { desc = "Scroll down half a page" })
+map.set("i", "<C-b>", "<C-b>", { desc = "Scroll up a full page" })
+map.set("i", "<C-f>", "<C-f>", { desc = "Scroll down a full page" })
 
 -- Fold
 map.set("n", "za", "za", { desc = "Toggle fold under cursor" })
