@@ -54,39 +54,8 @@ require("telescope").setup({
     },
   },
 })
-require("blink.cmp").setup({
-  completion = {
-    accept = {
-      auto_brackets = {
-        enabled = true,
-      },
-    },
-    menu = {
-      auto_show = false,
-      draw = {
-        treesitter = { "lsp" },
-      },
-    },
-    documentation = {
-      auto_show = true,
-      auto_show_delay_ms = 200,
-    },
-  },
-  keymap = {
-    ["<C-d>"] = { "show", "show_documentation", "hide_documentation" },
-    ["<CR>"] = { "accept", "fallback" },
-    ["<Tab>"] = { "select_next", "fallback" },
-    ["<S-Tab>"] = { "select_prev", "fallback" },
-  },
-  sources = {
-    cmdline = {},
-  },
-  signature = { enabled = true }
-})
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
-
 local servers = {
   lua_ls = {
     settings = {
@@ -106,7 +75,6 @@ local servers = {
 }
 
 require("mason").setup()
-
 require("mason-lspconfig").setup({
   ensure_installed = vim.tbl_keys(servers or {}),
   automatic_installation = false,

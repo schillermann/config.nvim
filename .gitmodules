@@ -16,9 +16,6 @@
 [submodule "pack/github/start/lib-plenary"]
 	path = pack/github/start/lib-plenary
 	url = git@github.com:nvim-lua/plenary.nvim.git
-[submodule "pack/github/start/blink-cmp"]
-	path = pack/github/start/blink-cmp
-	url = git@github.com:Saghen/blink.cmp.git
 [submodule "pack/github/start/copilot"]
 	path = pack/github/start/copilot
 	url = git@github.com:zbirenbaum/copilot.lua.git
