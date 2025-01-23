@@ -3,17 +3,19 @@ local map = vim.keymap
 
 -- Remap original key maps
 -- Completion
-map.set("n", "z=", "z=", { desc = "Spell check suggestions" })
-map.set("i", "<C-n>", "<C-n>", { desc = "Next completion based on text in open buffers" })
-map.set("i", "<C-p>", "<C-p>", { desc = "Previous completion based on text in open buffers" })
-map.set("i", "<C-x><C-o>", "<C-x><C-o>", { desc = "Omni Auto complete" })
-map.set("i", "<C-x><C-f>", "<C-x><C-f>", { desc = "File auto complete" })
-map.set("i", "<C-x><C-l>", "<C-x><C-l>", { desc = "Line auto complete" })
-map.set("i", "<C-x><C-y>", "<C-x><C-y>", { desc = "Scroll the screen" })
-map.set("i", "<C-x><C-k>", "<C-x><C-k>", { desc = "Dictionary auto complete" })
-map.set("i", "<C-x><C-s>", "<C-x><C-s>", { desc = "Spell auto complete" })
-map.set("i", "<C-x><C-t>", "<C-x><C-t>", { desc = "Thesaurus auto complete" })
-map.set("i", "<C-x><C-i>", "<C-x><C-i>", { desc = "Completes the word based on the keywords found in the current file" })
+map.set("n", "z=", "z=", { desc = "Spell word check suggestions" })
+map.set("i", "<C-n>", "<C-n>", { desc = "Next keyword completion based on current buffers" })
+map.set("i", "<C-p>", "<C-p>", { desc = "Previous keyword completion based on current buffers" })
+map.set("i", "<C-x><C-o>", "<C-x><C-o>", { desc = "Code omni mode completion" })
+map.set("i", "<C-x><C-f>", "<C-x><C-f>", { desc = "File completion" })
+map.set("i", "<C-x><C-l>", "<C-x><C-l>", { desc = "Line completion based on current buffer" })
+map.set("i", "<C-x><C-k>", "<C-x><C-k>", { desc = "Dictionary word completion" })
+map.set("i", "<C-x><C-s>", "<C-x><C-s>", { desc = "Spell word completion" })
+map.set("i", "<C-x><C-t>", "<C-x><C-t>", { desc = "Thesaurus word complete" })
+map.set("i", "<C-x><C-i>", "<C-x><C-i>", { desc = "Identifiers completion based on current buffer and included files" })
+-- Scroll
+map.set("i", "<C-y>", "<C-y>", { desc = "Scroll the screen up" })
+map.set("i", "<C-e>", "<C-e>", { desc = "Scroll the screen down" })
 
 -- Fold
 map.set("n", "za", "za", { desc = "Toggle fold under cursor" })
