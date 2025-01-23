@@ -181,3 +181,31 @@ git submodule add git@github.com:owner/package-name.git pack/github/opt/package-
 3. `:help normal-index` List all key bindings and commands for normal mode
 4. `:help visual-index` List all key bindings and commands for visual mode
 5. `:help insert-index` List all key bindings and commands for insert mode
+
+## Troubleshooting
+
+### Push New Git Branch
+
+When you push a new branch ...
+
+```vim
+:Git push
+```
+
+... can you get this error.
+
+```sh
+fatal: The current branch my-new-branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin my-new-branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+```
+
+One solution is to set the git remote push setup to automatic.
+
+```sh
+git config --global --type bool push.autoSetupRemote true
+```
