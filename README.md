@@ -198,3 +198,17 @@ One solution is to set the git remote push setup to automatic.
 ```sh
 git config --global --type bool push.autoSetupRemote true
 ```
+
+### Help Map for vim-fugitive package
+
+If you type `g?` and get the error, then the help tags are missing.
+
+```sh
+no help for fugitive-map
+```
+
+This is how you create the help tags.
+
+```vim
+:helptags ALL
+```
