@@ -1,9 +1,13 @@
 local opt = vim.opt
 
-vim.g.mapleader = " "
-vim.g.netrw_banner = 0
 opt.mouse = ""
 opt.scrolloff = 10
+opt.relativenumber = true
+
+-- Global options
+vim.g.mapleader = " "
+vim.g.netrw_banner = 0
+-- Spell
 opt.spelllang = "en_us"
 opt.spell = true
 -- Ignore by path auto completion
