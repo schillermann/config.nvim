@@ -91,8 +91,8 @@ require("copilot").setup({
   suggestion = {
     auto_trigger = true,
     keymap = {
-      accept = "<Tab>"
-    }
+      accept_word = "<C-l>",
+    },
   }
 })
 require("CopilotChat").setup({
