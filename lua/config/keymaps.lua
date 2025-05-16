@@ -1,6 +1,9 @@
 local autoCmdGroup = vim.api.nvim_create_augroup("KeymapGroup", {})
 local map = vim.keymap
 
+vim.keymap.set('n', 'd', '"_d', { desc = 'Delete selection' })
+vim.keymap.set('n', 'dd', '"_dd', { desc = 'Delete line' })
+
 -- Remap original key maps
 -- Completion
 map.set("n", "z=", "z=", { desc = "Spell word check suggestions" })
