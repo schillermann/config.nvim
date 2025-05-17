@@ -24,10 +24,10 @@ opt.expandtab = true
 opt.splitright = true
 opt.splitbelow = true
 -- fold
-opt.foldmethod = "marker"
-opt.foldmarker = "{,}"
-opt.foldlevelstart = 1
-opt.foldtext = " "
+opt.foldcolumn = "1"
+opt.foldlevel = 20
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.fillchars = { fold = " " }
 
 vim.cmd("colorscheme tokyonight")
