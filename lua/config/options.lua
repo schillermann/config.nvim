@@ -2,7 +2,9 @@ local opt = vim.opt
 
 opt.mouse = ""
 opt.scrolloff = 10
-opt.relativenumber = true
+opt.relativenumber = false
+opt.wrap = false
+opt.signcolumn = "yes"
 
 -- Global options
 vim.g.mapleader = " "
