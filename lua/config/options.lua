@@ -8,7 +8,7 @@ opt.relativenumber = true
 vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 -- Spell
-opt.spelllang = "en_us"
+opt.spelllang = { "en_us", "de_20" }
 opt.spell = true
 -- Ignore by path auto completion
 opt.wildignore = { "*/.git/*", "*/node_modules/*", "*/dist/*" }
