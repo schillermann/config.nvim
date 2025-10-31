@@ -18,6 +18,14 @@ map.set("i", "<C-x><C-k>", "<C-x><C-k>", { desc = "Dictionary word completion" }
 map.set("i", "<C-x><C-s>", "<C-x><C-s>", { desc = "Spell word completion" })
 map.set("i", "<C-x><C-t>", "<C-x><C-t>", { desc = "Thesaurus word complete" })
 map.set("i", "<C-x><C-i>", "<C-x><C-i>", { desc = "Identifiers completion based on current buffer and included files" })
+-- LSP
+map.set({ "n", "x" }, "gra", vim.lsp.buf.code_action, { desc = "LSP select a code action" })
+map.set("n", "gri", vim.lsp.buf.implementation, { desc = "LSP list implementations to the symbol" })
+map.set("n", "grn", vim.lsp.buf.rename, { desc = "LSP rename all references to the symbol" })
+map.set("n", "grr", vim.lsp.buf.references, { desc = "LSP list references to the symbol" })
+map.set("n", "grt", vim.lsp.buf.type_definition, { desc = "LSP go to the definition of the type of the symbol" })
+map.set("n", "gO", vim.lsp.buf.document_symbol, { desc = "Lists all symbols in the current buffer" })
+map.set("n", "grs", vim.lsp.buf.signature_help, { desc = "LSP signature information" })
 -- Scroll
 map.set("i", "<C-y>", "<C-y>", { desc = "Scroll up a line" })
 map.set("i", "<C-e>", "<C-e>", { desc = "Scroll down a line" })
@@ -67,18 +75,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gd", vim.lsp.buf.definition,
       { buffer = event.buf, desc = "LSP [g]oto [d]efinition where the function is defined" })
     vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = event.buf, desc = "LSP show hover information" })
-    vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, { buffer = event.buf, desc = "LSP [g]oto [s]ignature help" })
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = event.buf, desc = "LSP [g]o to [i]mplementation" })
-    vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, { buffer = event.buf, desc = "LSP [g]o to [t]ype definition" })
-    vim.keymap.set("n", "<leader>r", vim.lsp.buf.references, { buffer = event.buf, desc = "LSP list [r]eferences" })
-    vim.keymap.set({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action,
-      { buffer = event.buf, desc = "LSP list [c]ode [a]ction" })
     vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { buffer = event.buf, desc = "LSP [c]ode [f]ormat" })
-    vim.keymap.set("n", "<leader>sd", vim.lsp.buf.document_symbol,
-      { buffer = event.buf, desc = "LSP list [s]ymbols in [d]ocument " })
     vim.keymap.set("n", "<leader>sw", vim.lsp.buf.workspace_symbol,
       { buffer = event.buf, desc = "LSP list [s]ymbols in [w]orkspace" })
-    vim.keymap.set("n", "<leader>sr", vim.lsp.buf.rename, { buffer = event.buf, desc = "LSP [s]ymbol [r]ename" })
     vim.keymap.set("n", "<leader>si", vim.lsp.buf.incoming_calls,
       { buffer = event.buf, desc = "LSP list [s]ymbol [i]ncoming calls" })
     vim.keymap.set("n", "<leader>so", vim.lsp.buf.outgoing_calls,
