@@ -6,6 +6,8 @@ vim.keymap.set('n', 'dd', '"_dd', { desc = 'Delete line' })
 
 -- Remap original key maps
 -- Completion
+map.set("n", "]s", "]s", { desc = "Jump to next misspelled world" })
+map.set("n", "[s", "[s", { desc = "Jump to previews misspelled world" })
 map.set("n", "z=", "z=", { desc = "Spell word check suggestions" })
 map.set("i", "<C-n>", "<C-n>", { desc = "Next keyword completion based on current buffers" })
 map.set("i", "<C-p>", "<C-p>", { desc = "Previous keyword completion based on current buffers" })
