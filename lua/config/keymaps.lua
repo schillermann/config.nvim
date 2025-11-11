@@ -18,6 +18,7 @@ map.set("i", "<C-x><C-k>", "<C-x><C-k>", { desc = "Dictionary word completion" }
 map.set("i", "<C-x><C-s>", "<C-x><C-s>", { desc = "Spell word completion" })
 map.set("i", "<C-x><C-t>", "<C-x><C-t>", { desc = "Thesaurus word complete" })
 map.set("i", "<C-x><C-i>", "<C-x><C-i>", { desc = "Identifiers completion based on current buffer and included files" })
+map.set("v", '"+y', '"+y', { desc = "Copy text to clipboard" })
 -- LSP
 map.set({ "n", "x" }, "gra", vim.lsp.buf.code_action, { desc = "LSP select a code action" })
 map.set("n", "gri", vim.lsp.buf.implementation, { desc = "LSP list implementations to the symbol" })
