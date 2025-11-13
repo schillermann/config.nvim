@@ -55,6 +55,8 @@ require("telescope").setup({
   },
 })
 
+require("telescope").load_extension("ex_commands")
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local servers = {
   lua_ls = {
