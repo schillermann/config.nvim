@@ -161,15 +161,22 @@ git submodule add git@github.com:owner/package-name.git pack/github/opt/package-
 
 ### Files
 
-1. `:find FILENAME` Find file by name in project with `<tab>` auto completion
+|Command         |Description                                              |
+|----------------|---------------------------------------------------------|
+|`:find FILENAME`|Find file by name in project with `<tab>` auto completion|
 
-### Keymaps
+### Help
 
-1. `:Telescope keymaps` Find keymaps
-2. `:help index` All key bindings and commands
-3. `:help normal-index` List all key bindings and commands for normal mode
-4. `:help visual-index` List all key bindings and commands for visual mode
-5. `:help insert-index` List all key bindings and commands for insert mode
+|Command                      |Description                         |
+|-----------------------------|------------------------------------|
+|`:Telescope keymaps`         |Find user keymaps                   |
+|`:Telescope commands`        |Find user commands                  |
+|`:Telescope commands_ex`     |Find Ex commands                    |
+|`:Telescope commands_options`|Find command options                |
+|`:help index`                |List of all commands for each mode  |
+|`:help normal-index`         |List of all commands for normal mode| 
+|`:help visual-index`         |List of all commands for visual mode|
+|`:help insert-index`         |List of all commands for insert mode|
 
 ## Troubleshooting
 
