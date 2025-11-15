@@ -4,40 +4,49 @@ local conf = require("telescope.config").values
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 local entry_display = require("telescope.pickers.entry_display")
-local json_file = require("json_file")
+local file_json = require("telescope._extensions.file_json")
 
-local function ex_commands(opts)
+local M = {}
+
+function M.picker(filename, title, opts)
+  title = title or "Commands"
   opts = opts or {}
 
-  local exCommands = json_file.load("lua/telescope/_extensions/ex_commands.json")
 
-  -- Define column layout
+  if not filename then
+    vim.notify("No filename provided to load command list", vim.log.levels.ERROR)
+    return {}
+  end
+
+  local command_list = file_json.load("lua/telescope/_extensions/" .. filename)
+
+  -- Define three column layout
   local displayer = entry_display.create({
     separator = " │ ",
     items = {
-      { width = 15 },       -- tag
-      { width = 17 },       -- command
-      { remaining = true }, -- action fills remaining space
+      { width = 15 },
+      { width = 17 },
+      { remaining = true },
     },
   })
 
   local make_display = function(entry)
     return displayer({
-      entry.value.tag,
-      entry.value.command,
-      entry.value.action,
+      entry.value[1],
+      entry.value[2],
+      entry.value[3],
     })
   end
 
-  pickers.new(opts, {
-    prompt_title = "Ex-Commands Index",
+  local picker = pickers.new(opts, {
+    prompt_title = title,
     finder = finders.new_table({
-      results = exCommands,
+      results = command_list,
       entry_maker = function(entry)
         return {
           value = entry,
           display = make_display,
-          ordinal = table.concat({ entry.tag, entry.command, entry.action }, " "),
+          ordinal = table.concat(entry, " "),
         }
       end,
     }),
@@ -49,8 +58,8 @@ local function ex_commands(opts)
         local selection = action_state.get_selected_entry()
         actions.close(prompt_bufnr)
 
-        if selection and selection.value and selection.value.tag then
-          local cmd = selection.value.tag
+        if selection and selection.value and selection.value[1] then
+          local cmd = selection.value[1]
           -- Open the command-line with the command pre-filled
           vim.api.nvim_feedkeys(":" .. cmd, "n", false)
         end
@@ -59,19 +68,17 @@ local function ex_commands(opts)
         local selection = action_state.get_selected_entry()
         actions.close(prompt_bufnr)
 
-        if selection and selection.value and selection.value.tag then
-          local cmd = selection.value.tag
+        if selection and selection.value and selection.value[1] then
+          local cmd = selection.value[1]
           -- Open the command-line with the command pre-filled
           vim.api.nvim_feedkeys(":" .. cmd, "n", false)
         end
       end)
       return true
     end,
-  }):find()
+  })
+
+  return picker
 end
 
-return require("telescope").register_extension({
-  exports = {
-    ex_commands = ex_commands,
-  },
-})
+return M
