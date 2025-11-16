@@ -8,10 +8,22 @@ local file_json = require("telescope._extensions.file_json")
 
 local M = {}
 
-function M.picker(filename, title, opts)
+local function build_column_items(column_widths)
+  local items = {}
+  for _, column_width in ipairs(column_widths) do
+    if column_width == 0 then
+      table.insert(items, { remaining = true })
+    else
+      table.insert(items, { width = column_width })
+    end
+  end
+  return items
+end
+
+function M.picker(filename, title, column_widths, opts)
   title = title or "Commands"
   opts = opts or {}
-
+  column_widths = column_widths or { 15, 17, 0 }
 
   if not filename then
     vim.notify("No filename provided to load command list", vim.log.levels.ERROR)
@@ -23,19 +35,11 @@ function M.picker(filename, title, opts)
   -- Define three column layout
   local displayer = entry_display.create({
     separator = " │ ",
-    items = {
-      { width = 15 },
-      { width = 17 },
-      { remaining = true },
-    },
+    items = build_column_items(column_widths),
   })
 
   local make_display = function(entry)
-    return displayer({
-      entry.value[1],
-      entry.value[2],
-      entry.value[3],
-    })
+    return displayer(entry.value)
   end
 
   local picker = pickers.new(opts, {
@@ -58,7 +62,7 @@ function M.picker(filename, title, opts)
         local selection = action_state.get_selected_entry()
         actions.close(prompt_bufnr)
 
-        if selection and selection.value and selection.value[1] then
+        if selection and selection.value then
           local cmd = selection.value[1]
           -- Open the command-line with the command pre-filled
           vim.api.nvim_feedkeys(":" .. cmd, "n", false)
@@ -68,7 +72,7 @@ function M.picker(filename, title, opts)
         local selection = action_state.get_selected_entry()
         actions.close(prompt_bufnr)
 
-        if selection and selection.value and selection.value[1] then
+        if selection and selection.value then
           local cmd = selection.value[1]
           -- Open the command-line with the command pre-filled
           vim.api.nvim_feedkeys(":" .. cmd, "n", false)

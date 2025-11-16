@@ -3,7 +3,7 @@ local command_list = require("telescope._extensions.command_list")
 return require("telescope").register_extension({
   exports = {
     commands_ex = function(opts)
-      command_list.picker("commands_ex.json", "Ex-Commands Index", opts):find()
+      command_list.picker("commands_ex.json", "Ex-Commands Index", { 15, 17, 0 }, opts):find()
     end
   },
 })
