@@ -77,19 +77,30 @@ function M.picker(filename, title, column_widths, opts)
   return create_picker(list, title, column_widths, opts)
 end
 
+local function row_fill_missing_columns(column_value, max_columns)
+
+  local row = {}
+  for i = 1, max_columns do
+    row[i] = column_value[i] or ""
+  end
+  return row
+end
+
+
 function M.multi_picker(filenames, title, column_widths, opts)
   if type(filenames) ~= "table" then
     vim.notify("multi_picker requires a list of filenames", vim.log.levels.ERROR)
     return
   end
 
+  local max_columns = #column_widths
   local all = {}
 
   for _, fname in ipairs(filenames) do
     local list = file_json.load("lua/telescope/_extensions/" .. fname)
     if list then
       for _, item in ipairs(list) do
-        table.insert(all, item)
+        table.insert(all, row_fill_missing_columns(item, max_columns))
       end
     end
   end
