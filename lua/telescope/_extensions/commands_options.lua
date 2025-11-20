@@ -5,7 +5,7 @@ return require("telescope").register_extension({
     commands_options = function(opts)
       local filename = "commands_options.json"
       local title = "Commands Options"
-      local column_widths = { 25, 0 }
+      local column_widths = { 25, 20, 0 }
 
       local picker = command_list.picker(filename, title, column_widths, opts)
 
