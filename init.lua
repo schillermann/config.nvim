@@ -76,6 +76,14 @@ local servers = {
     },
   },
   html = {},
+  jsonls = {
+    settings = {
+      json = {
+        schemas = require("schemastore").json.schemas(),
+        validate = { enable = true },
+      },
+    },
+  },
 }
 
 require("mason").setup()
