@@ -53,6 +53,11 @@ require("telescope").setup({
       prompt_position = "top",
     },
   },
+  pickers = {
+    buffers = {
+      initial_mode = "normal",
+    }
+  }
 })
 
 require("telescope").load_extension("commands_ex")

@@ -61,7 +61,7 @@ map.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 local builtin = require("telescope.builtin")
 map.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
 map.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-map.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+map.set("n", "<leader>b", builtin.buffers, { desc = "Telescope buffers" })
 map.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 -- Package Copilot Chat
 map.set({ "n", "v" }, "<leader>aa", "<CMD>CopilotChatToggle<CR>", { desc = "Open and close Copilot Chat" })
@@ -114,6 +114,6 @@ require("gitsigns").setup({
   end,
 })
 -- Package Browse
-vim.keymap.set("n", "<leader>b", function()
+vim.keymap.set("n", "<leader>m", function()
   require("browse").browse()
 end)
