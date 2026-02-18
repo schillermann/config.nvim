@@ -6,6 +6,10 @@ opt.relativenumber = false
 opt.wrap = false
 opt.signcolumn = "yes"
 
+-- Make y use system clipboard
+vim.keymap.set({ "n", "v" }, "y", '"+y')
+vim.keymap.set("n", "Y", '"+Y')
+
 -- Global options
 vim.g.mapleader = " "
 vim.g.netrw_banner = 0
