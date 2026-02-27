@@ -51,11 +51,6 @@ require("telescope").setup({
     layout_strategy = "vertical",
     layout_config = {
       prompt_position = "top",
-    },
-  },
-  pickers = {
-    buffers = {
-      initial_mode = "normal",
     }
   }
 })
