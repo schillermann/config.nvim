@@ -13,6 +13,8 @@ vim.keymap.set("n", "Y", '"+Y')
 -- Global options
 vim.g.mapleader = " "
 vim.g.netrw_banner = 0
+-- grep ignore .git directory with recursive, line number, ignore binary files
+vim.opt.grepprg = "grep -rnI --exclude-dir=.git $* ."
 -- Spell
 opt.spelllang = { "en_us", "de_20" }
 opt.spell = true
