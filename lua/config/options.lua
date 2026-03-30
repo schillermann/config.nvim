@@ -10,11 +10,15 @@ opt.signcolumn = "yes"
 vim.keymap.set({ "n", "v" }, "y", '"+y')
 vim.keymap.set("n", "Y", '"+Y')
 
+-- grep
+-- ignore .git directory with recursive, line number, ignore binary files
+opt.grepprg = "grep -rnI --exclude-dir=.git $*"
+-- Ensure the format matches: filename:line:message
+opt.grepformat = "%f:%l:%m"
+
 -- Global options
 vim.g.mapleader = " "
 vim.g.netrw_banner = 0
--- grep ignore .git directory with recursive, line number, ignore binary files
-vim.opt.grepprg = "grep -rnI --exclude-dir=.git $* ."
 -- Spell
 opt.spelllang = { "en_us", "de_20" }
 opt.spell = true
