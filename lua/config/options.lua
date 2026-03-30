@@ -25,7 +25,7 @@ opt.spell = true
 -- Ignore by path auto completion
 opt.wildignore = { "*/.git/*", "*/node_modules/*", "*/dist/*" }
 -- Path to find files in project with `:find` command
-vim.o.path = ".,**"
+vim.opt.path = { ".", "**" }
 -- 2 spaces for tabs
 opt.tabstop = 2
 opt.shiftwidth = 2
