@@ -40,8 +40,11 @@ local function command_templates()
 					{ "check key map exists in insert mode", "imap keys" },
 					-- file
 					{ "lsp format file", "lua vim.lsp.buf.format()" },
+					{ "creates new buffer in current window", "enew" },
 					-- plugins
-					{ "uninstall plugin", 'lua vim.pack.del({ "name" })' },
+					{ "uninstall plugin",	'lua vim.pack.del({ "name" })' },
+          -- log
+					{ "error log", "messages" },
 				},
 				entry_maker = function(entry)
 					return {
