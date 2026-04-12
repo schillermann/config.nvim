@@ -4,11 +4,11 @@ vim.pack.add({
 })
 
 require("telescope").setup({
-  defaults = {
-    layout_config = {
-      width = 0.99,
-    },
-  },
+	defaults = {
+		layout_config = {
+			width = 0.99,
+		},
+	},
 })
 
 local function command_templates()
@@ -40,6 +40,8 @@ local function command_templates()
 					{ "check key map exists in insert mode", "imap keys" },
 					-- file
 					{ "lsp format file", "lua vim.lsp.buf.format()" },
+					-- plugins
+					{ "uninstall plugin", 'lua vim.pack.del({ "name" })' },
 				},
 				entry_maker = function(entry)
 					return {
