@@ -1,6 +1,7 @@
 require("vim._core.ui2").enable()
 require("colorscheme")
 require("options")
+require("keymaps")
 require("plugins.fugitive")
 require("plugins.lsp")
 require("plugins.telescope")
