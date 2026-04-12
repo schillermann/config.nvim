@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+-- column
+opt.signcolumn = "yes"
 -- leader key
 vim.g.mapleader = " "
 -- line

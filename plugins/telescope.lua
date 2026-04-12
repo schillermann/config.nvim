@@ -24,6 +24,9 @@ local function command_templates()
 			finder = finders.new_table({
 				results = {
 					-- { "Description", "Command" }
+					-- buffer
+					{ "close current file/buffer", "bd" },
+					{ "close current file/buffer", "bdelete" },
 					-- search
 					{ "search and replace global in file", "%s/old/new/g" },
 					{ "search and replace confirm global in file", "%s/old/new/gc" },
@@ -34,16 +37,16 @@ local function command_templates()
 					{ "filter lines in current directory recursively to quickfix list", "grep pattern **/*" },
 					{ "delete empty lines in file", "g/^$/d" },
 					-- key mapped
-					{ "check key map exists in all modes", "map keys" },
-					{ "check key map exists in normal mode", "nmap keys" },
-					{ "check key map exists in visual mode", "vmap keys" },
-					{ "check key map exists in insert mode", "imap keys" },
+					{ "check key map exists in all modes", "map <leader>e" },
+					{ "check key map exists in normal mode", "nmap <leader>e" },
+					{ "check key map exists in visual mode", "vmap <leader>e" },
+					{ "check key map exists in insert mode", "imap <leader>e" },
 					-- file
 					{ "lsp format file", "lua vim.lsp.buf.format()" },
 					{ "creates new buffer in current window", "enew" },
 					-- plugins
-					{ "uninstall plugin",	'lua vim.pack.del({ "name" })' },
-          -- log
+					{ "uninstall plugin", 'lua vim.pack.del({ "name" })' },
+					-- log
 					{ "error log", "messages" },
 				},
 				entry_maker = function(entry)
@@ -72,4 +75,4 @@ local function command_templates()
 		:find()
 end
 
-vim.keymap.set("n", "gt", command_templates, { desc = "Open command templates" })
+vim.keymap.set("n", "<leader>t", command_templates, { desc = "Open command templates" })
