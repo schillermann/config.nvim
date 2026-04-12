@@ -1,3 +1,15 @@
+local opt = vim.opt
+
+-- Line
+opt.wrap = false
+-- Scroll
+opt.scrolloff = 10
+-- Explorer
+vim.g.netrw_banner = 0
+-- Spell
+opt.spelllang = { "en_us", "de_20" }
+opt.spell = true
+
 -- auto command prevents ignore global settings
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "*",                   -- Matches every file type
