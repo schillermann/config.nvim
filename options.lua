@@ -1,15 +1,16 @@
 local opt = vim.opt
 
--- Line
+-- leader key
+vim.g.mapleader = " "
+-- line
 opt.wrap = false
--- Scroll
+-- scroll
 opt.scrolloff = 10
--- Explorer
+-- explorer
 vim.g.netrw_banner = 0
--- Spell
+-- spell
 opt.spelllang = { "en_us", "de_20" }
 opt.spell = true
-
 -- auto command prevents ignore global settings
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "*",                   -- Matches every file type
@@ -20,7 +21,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.expandtab = true -- Use spaces instead of tabs
   end,
 })
-
+-- box
 vim.diagnostic.config({
 	float = { border = "single" },
 })
