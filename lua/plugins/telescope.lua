@@ -25,8 +25,8 @@ local function command_templates()
 				results = {
 					-- { "Description", "Command" }
 					-- buffer
-					{ "close current file/buffer", "bd" },
-					{ "close current file/buffer", "bdelete" },
+					{ "close current buffer", "bd" },
+					{ "close current buffer", "bdelete" },
 					-- search
 					{ "search and replace global in file", "%s/old/new/g" },
 					{ "search and replace confirm global in file", "%s/old/new/gc" },

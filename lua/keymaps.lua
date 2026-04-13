@@ -1,5 +1,8 @@
 local map = vim.keymap
 
+-- search and replace
+map.set("n", "sr", ":%s///gI<Left><Left><Left><Left>", { desc = "Search and replace global in file" })
+map.set("v", "sr", ":s///gI<Left><Left><Left><Left>", { desc = "Search and replace in selection" })
 -- delete without yank
 map.set("n", "d", '"_d', { desc = "Delete selection" })
 map.set("n", "dd", '"_dd', { desc = "Delete line" })
@@ -9,7 +12,7 @@ map.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
 map.set("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Jump to the next buffer" })
 map.set("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Jump to the previous buffer" })
 -- terminal
-map.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+map.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 
 -- default mappings with description
 --  NAVIGATION & INFO
